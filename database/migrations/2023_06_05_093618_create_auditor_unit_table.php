@@ -12,7 +12,13 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('auditor_unit', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id_auditor');
+            $table->unsignedInteger('id_user');
+            $table->unsignedInteger('id_unit_audit');
+            $table->string('nama_auditor', 100);
+            $table->string('nip_auditor', 10);
+            $table->foreign('id_user')->references('id_user')->on('user')->onDelete('cascade');
+            $table->foreign('id_unit_audit')->references('id_unit_audit')->on('unit_audit')->onDelete('cascade');
             $table->timestamps();
         });
     }

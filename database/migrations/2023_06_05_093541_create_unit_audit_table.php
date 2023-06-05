@@ -12,9 +12,17 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('unit_audit', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id_unit_audit');
+            $table->unsignedInteger('id_periode_audit');
+            $table->foreign('id_periode_audit')->references('id_periode_audit')->on('periode_audit');
+            $table->unsignedInteger('id_standar_ruang_lingkup');
+            $table->foreign('id_standar_ruang_lingkup')->references('id_standar_ruang_lingkup')->on('standar_ruang_lingkup')->onDelete('cascade');
+            $table->string('nama_unit', 100);
+            $table->date('tanggal_audit');
+            $table->string('ketua_tim', 100);
+            $table->string('nip_ketua_tim', 10);
             $table->timestamps();
-        });
+        }):
     }
 
     /**
