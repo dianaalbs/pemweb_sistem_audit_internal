@@ -12,7 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('setup_file', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id_setup_file');
+            $table->unsignedInteger('id_auditee');
+            $table->string('nama_file', 100);
+            $table->text('deskripsi_file');
+            $table->foreign('id_auditee')->references('id_auditee')->on('auditee')->onDelete('cascade');
             $table->timestamps();
         });
     }
