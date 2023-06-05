@@ -12,9 +12,14 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('auditee', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id_auditee');
+            $table->unsignedInteger('id_user');
+            $table->string('nama_auditee', 100);
+            $table->string('sub_bagian', 100);
+            $table->foreign('id_user')->references('id_user')->on('user')->onDelete('cascade');
             $table->timestamps();
         });
+
     }
 
     /**
