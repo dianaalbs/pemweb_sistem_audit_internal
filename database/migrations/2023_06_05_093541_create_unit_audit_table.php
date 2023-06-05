@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('ketua_tim', 100);
             $table->string('nip_ketua_tim', 10);
             $table->timestamps();
-        }):
+        })
     }
 
     /**
