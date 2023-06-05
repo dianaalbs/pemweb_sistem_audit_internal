@@ -12,9 +12,13 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('admin', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id_admin');
+            $table->unsignedInteger('id_user');
+            $table->string('nama', 100);
+            $table->foreign('id_user')->references('id_user')->on('user')->onDelete('cascade');
             $table->timestamps();
         });
+
     }
 
     /**
