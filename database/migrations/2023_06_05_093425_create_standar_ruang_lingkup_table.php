@@ -12,7 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('standar_ruang_lingkup', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id_standar_ruang_lingkup');
+            $table->unsignedInteger('id_setup_file');
+            $table->string('nama_ruang_lingkup', 100);
+            $table->string('jenis_ruang_lingkup', 100);
+            $table->text('deskripsi_ruang_lingkup');
+            $table->foreign('id_setup_file')->references('id_setup_file')->on('setup_file')->onDelete('cascade');
             $table->timestamps();
         });
     }
