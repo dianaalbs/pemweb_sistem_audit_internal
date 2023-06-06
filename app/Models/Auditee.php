@@ -24,7 +24,7 @@ class Auditee extends Model
         'updated_at'
     ];
 
-    //Relation with model user()
+    //Relation with model Users()
     public function user()
     {
         return $this->belongsTo(Users::class, 'id_user');

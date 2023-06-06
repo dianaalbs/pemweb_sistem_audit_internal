@@ -25,7 +25,7 @@ class Auditor_Unit extends Model
         'update_at'
     ];
 
-    //Relation with user
+    //Relation with Users
     public function user ()
     {
         return $this->belongsTo(Users::class, 'id_user');
