@@ -9,7 +9,7 @@ class hasil_audit extends Model
 {
     use HasFactory;
 
-    
+
     protected $table = 'hasil_audit';
 
     protected $primarykey = 'id_hasil_audit';
@@ -24,11 +24,6 @@ class hasil_audit extends Model
         'tanggal_kesanggupan_pembayaran',
         'rekomendasi_follow_up',
         'tindak_lanjut'
-    ];
-
-    protected $hidden = [
-        'created_at',
-        'updated_at'
     ];
 
     //Relation with model standar_ruang_lingkup()
