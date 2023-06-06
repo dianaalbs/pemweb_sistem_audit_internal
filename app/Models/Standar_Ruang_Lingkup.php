@@ -13,8 +13,6 @@ class Standar_Ruang_Lingkup extends Model
 
     protected $primaryKey = 'id_standar_ruang_lingkup';
 
-    protected $timestamps = false;
-
     protected $fillable = [
         'id_setup_file',
         'nama_ruang_lingkup',
@@ -22,9 +20,14 @@ class Standar_Ruang_Lingkup extends Model
         'deskripsi_ruang_lingkup',
     ];
 
+    protected $hidden = [
+        'created_at',
+        'updated_at'
+    ];
+    
     //Relation with model setup_file
     public function setup_file()
     {
-        return $this->belongsTo(setup_file::class, 'id_setup_file');
+        return $this->belongsTo(Setup_file::class, 'id_setup_file');
     }
 }

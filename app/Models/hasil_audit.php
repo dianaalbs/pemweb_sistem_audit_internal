@@ -14,8 +14,6 @@ class hasil_audit extends Model
 
     protected $primarykey = 'id_hasil_audit';
 
-    public $timestamps = false;
-
     protected $fillable = [
         'id_standar_ruang_lingkup',
         'kondisi_awal',
@@ -26,6 +24,11 @@ class hasil_audit extends Model
         'tanggal_kesanggupan_pembayaran',
         'rekomendasi_follow_up',
         'tindak_lanjut',
+    ];
+
+    protected $hidden = [
+        'created_at',
+        'updated_at'
     ];
 
     //Relation with model standar_ruang_lingkup()

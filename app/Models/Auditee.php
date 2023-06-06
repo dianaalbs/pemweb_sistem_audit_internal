@@ -13,18 +13,21 @@ class Auditee extends Model
 
     protected $primaryKey = 'id_auditee';
 
-    protected $timestamps = false;
-
     protected $fillable = [
         'id_user',
         'nama_auditee',
         'sub_bagian',
     ];
 
+    protected $hidden = [
+        'created_at',
+        'updated_at'
+    ];
+
     //Relation with model user()
     public function user()
     {
-        return $this->belongsTo(user::class, 'id_user');
+        return $this->belongsTo(Users::class, 'id_user');
     }
 }
 
