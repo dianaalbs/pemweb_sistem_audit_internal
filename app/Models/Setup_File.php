@@ -27,6 +27,6 @@ class Setup_File extends Model
     //Relation with model auditee()
     public function auditee()
     {
-        return $this->belongTo(Auditee::class, 'id_auditee');
+        return $this->belongsTo(Auditee::class, 'id_auditee');
     }
 }
