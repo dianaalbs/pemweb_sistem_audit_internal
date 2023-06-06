@@ -34,6 +34,6 @@ class hasil_audit extends Model
     //Relation with model standar_ruang_lingkup()
     public function standar_ruang_lingkup()
     {
-        return $this->belongsTo(standar_ruang_lingkup::class, 'id_standar_ruang_lingkup');
+        return $this->belongsTo(Standar_ruang_lingkup::class, 'id_standar_ruang_lingkup');
     }
 }
