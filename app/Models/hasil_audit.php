@@ -5,10 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class hasil_audit extends Model
+class Hasil_audit extends Model
 {
     use HasFactory;
-
 
     protected $table = 'hasil_audit';
 
@@ -23,7 +22,7 @@ class hasil_audit extends Model
         'feedback',
         'tanggal_kesanggupan_pembayaran',
         'rekomendasi_follow_up',
-        'tindak_lanjut'
+        'tindak_lanjut',
     ];
 
     //Relation with model standar_ruang_lingkup()
