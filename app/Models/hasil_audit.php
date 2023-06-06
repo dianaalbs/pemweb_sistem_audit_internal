@@ -23,7 +23,7 @@ class hasil_audit extends Model
         'feedback',
         'tanggal_kesanggupan_pembayaran',
         'rekomendasi_follow_up',
-        'tindak_lanjut',
+        'tindak_lanjut'
     ];
 
     protected $hidden = [

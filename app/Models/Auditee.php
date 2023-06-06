@@ -16,7 +16,7 @@ class Auditee extends Model
     protected $fillable = [
         'id_user',
         'nama_auditee',
-        'sub_bagian',
+        'sub_bagian'
     ];
 
     protected $hidden = [

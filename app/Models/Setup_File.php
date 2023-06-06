@@ -16,7 +16,7 @@ class Setup_File extends Model
     protected $fillable = [
         'id_auditee',
         'nama_file',
-        'deskripsi_file',
+        'deskripsi_file'
     ];
 
     protected $hidden = [

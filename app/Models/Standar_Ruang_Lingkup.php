@@ -17,14 +17,14 @@ class Standar_Ruang_Lingkup extends Model
         'id_setup_file',
         'nama_ruang_lingkup',
         'jenis_ruang_lingkup',
-        'deskripsi_ruang_lingkup',
+        'deskripsi_ruang_lingkup'
     ];
 
     protected $hidden = [
         'created_at',
         'updated_at'
     ];
-    
+
     //Relation with model setup_file
     public function setup_file()
     {
