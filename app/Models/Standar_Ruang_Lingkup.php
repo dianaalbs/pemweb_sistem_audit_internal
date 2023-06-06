@@ -51,6 +51,6 @@ class Standar_Ruang_Lingkup extends Model
     //Relation with model setup_file
     public function setup_file()
     {
-        return $this->belongsTo(Setup_file::class, 'id_setup_file');
+        return $this->belongsTo(Setup_File::class, 'id_setup_file');
     }
 }

@@ -55,11 +55,11 @@ class Unit_Audit extends Model
 
     public function periode_audit()
     {
-        return $this->belongsTo (Periode_audit::class, 'id_periode_audit');
+        return $this->belongsTo (Periode_Audit::class, 'id_periode_audit');
     }
 
     public function standar_ruang_lingkup()
     {
-        return $this->belongsTo (Standar_ruang_lingkup::class, 'id_standar_ruang_lingkup');
+        return $this->belongsTo (Standar_Ruang_Lingkup::class, 'id_standar_ruang_lingkup');
     }
 }

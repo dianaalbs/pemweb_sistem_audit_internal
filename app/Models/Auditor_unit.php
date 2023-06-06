@@ -58,6 +58,6 @@ class Auditor_Unit extends Model
     //Relation with Unit_audit
     public function unit_audit()
     {
-        return $this->belongsTo(Unit_audit::class, 'id_unit_audit');
+        return $this->belongsTo(Unit_Audit::class, 'id_unit_audit');
     }
 }
