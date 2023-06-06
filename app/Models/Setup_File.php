@@ -13,17 +13,20 @@ class Setup_File extends Model
 
     protected $primaryKey = 'id_setup_file';
 
-    protected $timestamps = false;
-
     protected $fillable = [
         'id_auditee',
         'nama_file',
         'deskripsi_file',
     ];
 
+    protected $hidden = [
+        'created_at',
+        'updated_at'
+    ];
+
     //Relation with model auditee()
     public function auditee()
     {
-        return $this->belongTo(auditee::class, 'id_auditee');
+        return $this->belongTo(Auditee::class, 'id_auditee');
     }
 }
