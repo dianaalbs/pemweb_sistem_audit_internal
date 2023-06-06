@@ -5,32 +5,6 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-/**
- * App\Models\Unit_Audit
- *
- * @property int $id_unit_audit
- * @property int $id_periode_audit
- * @property int $id_standar_ruang_lingkup
- * @property string $nama_unit
- * @property string $tanggal_audit
- * @property string $ketua_tim
- * @property string $nip_ketua_tim
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
- * @method static \Illuminate\Database\Eloquent\Builder|Unit_Audit newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Unit_Audit newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Unit_Audit query()
- * @method static \Illuminate\Database\Eloquent\Builder|Unit_Audit whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Unit_Audit whereIdPeriodeAudit($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Unit_Audit whereIdStandarRuangLingkup($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Unit_Audit whereIdUnitAudit($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Unit_Audit whereKetuaTim($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Unit_Audit whereNamaUnit($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Unit_Audit whereNipKetuaTim($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Unit_Audit whereTanggalAudit($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Unit_Audit whereUpdatedAt($value)
- * @mixin \Eloquent
- */
 class Unit_Audit extends Model
 {
     use HasFactory;
