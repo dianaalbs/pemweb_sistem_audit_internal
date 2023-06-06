@@ -11,7 +11,7 @@ class Auditee extends Model
 
     protected $table = 'auditee';
 
-    protected $primarykey = 'id_auditee';
+    protected $primaryKey = 'id_auditee';
 
     protected $timestamps = false;
 

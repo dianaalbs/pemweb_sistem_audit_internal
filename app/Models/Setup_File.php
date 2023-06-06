@@ -11,7 +11,7 @@ class Setup_File extends Model
 
     protected $table = 'setup_file';
 
-    protected $primarykey = 'id_setup_file';
+    protected $primaryKey = 'id_setup_file';
 
     protected $timestamps = false;
 

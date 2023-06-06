@@ -11,7 +11,7 @@ class Standar_Ruang_Lingkup extends Model
 
     protected $table = 'standar_ruang_lingkup';
 
-    protected $primarykey = 'id_standar_ruang_lingkup';
+    protected $primaryKey = 'id_standar_ruang_lingkup';
 
     protected $timestamps = false;
 
