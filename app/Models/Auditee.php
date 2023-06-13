@@ -27,7 +27,7 @@ class Auditee extends Model
     //Relation with model Users()
     public function user()
     {
-        return $this->belongsTo(Users::class, 'id_user');
+        return $this->belongsTo(User::class, 'id_user');
     }
 }
 
